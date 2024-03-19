@@ -2,9 +2,22 @@
 #include <sstream>
 #include "String.h"
 
+void RunFunctionSelection();
 void PrintFunctionList();
 
 int main() {
+	// Assessment criteria of outputing 'Hello World!' to the console.
+	String newString("Hello ");
+	newString = newString + "World!\n\n";
+	std::cout << newString.CStr();
+
+	// Extra stuffff.
+	RunFunctionSelection();
+
+	return 0;
+}
+
+void RunFunctionSelection() {
 	String workingString;
 
 	PrintFunctionList();
@@ -12,7 +25,7 @@ int main() {
 	// Create new String object and collect user input.
 	String consoleInput;
 	consoleInput.ReadFromConsole();
-	
+
 	// Convert string to int.
 	std::stringstream stream(consoleInput.CStr());
 	int functionID;
@@ -31,11 +44,8 @@ int main() {
 		default: {
 
 			std::cout << "\nError: Function doesn't exist!" << std::endl;
-			return -1;
 		}
 	}
-
-	return 0;
 }
 
 void PrintFunctionList() {

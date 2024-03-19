@@ -216,6 +216,21 @@ String& String::operator=(const String& _str)
 	return *this;
 }
 
+String String::operator+(const String& _str)
+{
+	String result(m_str);
+	result.Append(_str.CStr());
+
+	return result;
+}
+
+String& String::operator+=(const String& _str)
+{
+	Append(_str);
+
+	return *this;
+}
+
 char& String::operator[](size_t _index)
 {
 	char charResult = CharacterAt(_index);

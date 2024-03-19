@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{901F44B5-9EA5-483E-ACFF-7DDA8776037B}|String Utility Class\\String Utility Class.vcxproj|solutionrelative:String Utility Class\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{901F44B5-9EA5-483E-ACFF-7DDA8776037B}|String Utility Class\\String Utility Class.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\String Utility Class\\String Utility Class\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{901F44B5-9EA5-483E-ACFF-7DDA8776037B}|String Utility Class\\String Utility Class.vcxproj|solutionrelative:String Utility Class\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{901F44B5-9EA5-483E-ACFF-7DDA8776037B}|String Utility Class\\String Utility Class.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\String Utility Class\\String Utility Class\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{901F44B5-9EA5-483E-ACFF-7DDA8776037B}|String Utility Class\\String Utility Class.vcxproj|solutionrelative:String Utility Class\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{901F44B5-9EA5-483E-ACFF-7DDA8776037B}|String Utility Class\\String Utility Class.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\String Utility Class\\String Utility Class\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{901F44B5-9EA5-483E-ACFF-7DDA8776037B}|String Utility Class\\String Utility Class.vcxproj|solutionrelative:String Utility Class\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "String Utility Class\\Main.cpp",
               "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\String Utility Class\\String Utility Class\\Main.cpp",
               "RelativeToolTip": "String Utility Class\\Main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-18T11:16:14.373Z",
               "EditorCaption": ""
@@ -50,27 +50,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "String.cpp",
-              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\String Utility Class\\String Utility Class\\String.cpp",
-              "RelativeDocumentMoniker": "String Utility Class\\String.cpp",
-              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\String Utility Class\\String Utility Class\\String.cpp",
-              "RelativeToolTip": "String Utility Class\\String.cpp",
-              "ViewState": "AQIAADYAAAAAAAAAAAAmwGYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-18T11:17:11.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "String.h",
               "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\String Utility Class\\String Utility Class\\String.h",
               "RelativeDocumentMoniker": "String Utility Class\\String.h",
               "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\String Utility Class\\String Utility Class\\String.h",
               "RelativeToolTip": "String Utility Class\\String.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAATAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAC0AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-18T11:16:52.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "String.cpp",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\String Utility Class\\String Utility Class\\String.cpp",
+              "RelativeDocumentMoniker": "String Utility Class\\String.cpp",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\String Utility Class\\String Utility Class\\String.cpp",
+              "RelativeToolTip": "String Utility Class\\String.cpp",
+              "ViewState": "AQIAAMoAAAAAAAAAAAAmwOcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-18T11:17:11.646Z",
               "EditorCaption": ""
             }
           ]
