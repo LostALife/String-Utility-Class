@@ -1,6 +1,7 @@
 ﻿  Main.cpp
-  String.cpp
-  Generating Code...
-C:\Users\Bradon\Documents\My Documents\Visual Studio Projects\AIE\Programming Year 1 - 2024\String Utility Class\String Utility Class\String.cpp(230,1): warning C4172: returning address of local variable or temporary: charResult
-C:\Users\Bradon\Documents\My Documents\Visual Studio Projects\AIE\Programming Year 1 - 2024\String Utility Class\String Utility Class\String.cpp(223,1): warning C4172: returning address of local variable or temporary: charResult
+C:\Users\Bradon\Documents\My Documents\Visual Studio Projects\AIE\Programming Year 1 - 2024\String Utility Class\String Utility Class\String.h(4,1): warning C4005: 'SIZE_MAX': macro redefinition
+  (compiling source file 'Main.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\limits.h(64,1):
+  see previous definition of 'SIZE_MAX'
+  
   String Utility Class.vcxproj -> C:\Users\Bradon\Documents\My Documents\Visual Studio Projects\AIE\Programming Year 1 - 2024\String Utility Class\x64\Debug\String Utility Class.exe
