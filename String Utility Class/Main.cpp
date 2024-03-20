@@ -18,34 +18,53 @@ int main() {
 }
 
 void RunFunctionSelection() {
-	String workingString;
+	String workingString("");
 
 	PrintFunctionList();
 
+	GetInput:
 	// Create new String object and collect user input.
 	String consoleInput;
 	consoleInput.ReadFromConsole();
 
 	// Convert string to int.
 	std::stringstream stream(consoleInput.CStr());
-	int functionID;
-	stream >> functionID;
+	int streamValue;
+	stream >> streamValue;
 
 	// Run function depending on ID from user.
-	switch (functionID) {
+	switch (streamValue) {
 		// Set the workingString to input from the console.
 		case 1: {
-			std::cout << "\nPlease enter the text for the new String to contain:" << std::endl;
+			std::cout << "Please enter the text for the new String to contain:" << std::endl;
 			workingString.ReadFromConsole();
 
-			std::cout << "New String object created with contents: " << workingString.CStr() << std::endl;
+			std::cout << "New String object created with contents: " << workingString.CStr() << std::endl << std::endl;
+			break;
+		}
+		case 2: {
+			std::cout << "Memory reference: " << (void*)workingString.CStr() << std::endl << std::endl;
+			break;
+		}
+		case 3: {
+			std::cout << "String length: " << workingString.Length() << std::endl << std::endl;
+			break;
+		}
+		case 4: {
+			std::cout << "Please enter the index to search:" << std::endl;
+			consoleInput.ReadFromConsole();
+			stream.clear();
+			stream.str(consoleInput.CStr());
+			stream >> streamValue;
+
+			std::cout << "Character at index " << streamValue << " is " << workingString.CharacterAt(streamValue) << std::endl << std::endl;
 			break;
 		}
 		default: {
-
 			std::cout << "\nError: Function doesn't exist!" << std::endl;
 		}
 	}
+	goto GetInput;
 }
 
 void PrintFunctionList() {
@@ -62,7 +81,6 @@ void PrintFunctionList() {
 	std::cout << "(10) Find substring" << std::endl;
 	std::cout << "(11) Find substring starting from index" << std::endl;
 	std::cout << "(12) Replace substring" << std::endl;
-	std::cout << "(13) Set string from console input" << std::endl;
-	std::cout << "(14) Write stored string to console" << std::endl;
+	std::cout << "(13) Write stored string to console" << std::endl;
 	std::cout << "------------------------------------------------------\n" << std::endl;
 }
