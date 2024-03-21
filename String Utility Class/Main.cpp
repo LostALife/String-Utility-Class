@@ -20,9 +20,9 @@ int main() {
 void RunFunctionSelection() {
 	String workingString("");
 
+GetInput:
 	PrintFunctionList();
 
-	GetInput:
 	// Create new String object and collect user input.
 	String consoleInput;
 	consoleInput.ReadFromConsole();
@@ -60,6 +60,91 @@ void RunFunctionSelection() {
 			std::cout << "Character at index " << streamValue << " is " << workingString.CharacterAt(streamValue) << std::endl << std::endl;
 			break;
 		}
+		case 5: {
+			std::cout << "Please enter a string to compare against:" << std::endl;
+			consoleInput.ReadFromConsole();
+
+			if (workingString.EqualTo(consoleInput)) {
+				std::cout << "Strings are equal!" << std::endl << std::endl;
+			}
+			else {
+				std::cout << "Strings are not equal!" << std::endl << std::endl;
+			}
+			break;
+		}
+		case 6: {
+			std::cout << "Please enter a string to append:" << std::endl;
+			consoleInput.ReadFromConsole();
+
+			workingString.Append(consoleInput);
+			std::cout << "New string: " << workingString.CStr() << std::endl << std::endl;
+			break;
+		}
+		case 7: {
+			std::cout << "Please enter a string to prepend:" << std::endl;
+			consoleInput.ReadFromConsole();
+
+			workingString.Prepend(consoleInput);
+			std::cout << "New string: " << workingString.CStr() << std::endl << std::endl;
+			break;
+		}
+		case 8: {
+			workingString.ToLower();
+			std::cout << "Complete: " << workingString.CStr() << std::endl << std::endl;
+			break;
+		}
+		case 9: {
+			workingString.ToUpper();
+			std::cout << "Complete: " << workingString.CStr() << std::endl << std::endl;
+			break;
+		}
+		case 10: {
+			std::cout << "Please enter a string to search for:" << std::endl;
+			consoleInput.ReadFromConsole();
+			
+			size_t index = workingString.Find(consoleInput);
+			if (index != SIZE_MAX) {
+				std::cout << "Substring found at index " << index << std::endl << std::endl;
+			}
+			else {
+				std::cout << "Substring not found..." << std::endl << std::endl;
+			}
+			break;
+		}
+		case 11: {
+			std::cout << "Please enter a string to search for:" << std::endl;
+			String substring = consoleInput.ReadFromConsole();
+			std::cout << "Please enter a index to start from:" << std::endl;
+			consoleInput.ReadFromConsole();
+			stream.clear();
+			stream.str(consoleInput.CStr());
+			stream >> streamValue;
+			int startIndex = streamValue;
+
+			size_t index = workingString.Find(startIndex, substring);
+			if (index != SIZE_MAX) {
+				std::cout << "Substring found at index " << index << std::endl << std::endl;
+			}
+			else {
+				std::cout << "Substring not found..." << std::endl << std::endl;
+			}
+			break;
+		}
+		case 12: {
+			std::cout << "Please enter a string to find in the original string:" << std::endl;
+			String searchString = consoleInput.ReadFromConsole();
+			std::cout << "Please enter a string to replace with:" << std::endl;
+			String replaceString = consoleInput.ReadFromConsole();
+
+			workingString.Replace(searchString, replaceString);
+			std::cout << "Complete: " << workingString.CStr() << std::endl << std::endl;
+			break;
+		}
+		case 13: {
+			workingString.WriteToConsole();
+			std::cout << std::endl;
+			break;
+		}
 		default: {
 			std::cout << "\nError: Function doesn't exist!" << std::endl;
 		}
@@ -78,8 +163,8 @@ void PrintFunctionList() {
 	std::cout << "(7) Prepend to string" << std::endl;
 	std::cout << "(8) Make string lower case" << std::endl;
 	std::cout << "(9) Make string upper case" << std::endl;
-	std::cout << "(10) Find substring" << std::endl;
-	std::cout << "(11) Find substring starting from index" << std::endl;
+	std::cout << "(10) Find substring index" << std::endl;
+	std::cout << "(11) Find substring index starting from index" << std::endl;
 	std::cout << "(12) Replace substring" << std::endl;
 	std::cout << "(13) Write stored string to console" << std::endl;
 	std::cout << "------------------------------------------------------\n" << std::endl;
