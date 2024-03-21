@@ -29,11 +29,13 @@ String::~String()
 	delete[] m_str;
 }
 
+// Get the length of m_str.
 size_t String::Length() const
 {
 	return m_length;
 }
 
+// Get the character at index.
 char String::CharacterAt(size_t _index)
 {
 	if (_index > 0 && _index < m_length) {
@@ -54,11 +56,13 @@ const char String::CharacterAt(size_t _index) const
 	}
 }
 
+// Check if string passed into function is equal to m_str.
 bool String::EqualTo(const String& _other) const
 {
 	return strcmp(_other.m_str, m_str) == 0;
 }
 
+// Append _str to m_str.
 String& String::Append(const String& _str)
 {
 	const size_t catLength = _str.m_length + m_length;
@@ -78,6 +82,7 @@ String& String::Append(const String& _str)
 	return *this;
 }
 
+// Prepend _str to m_str
 String& String::Prepend(const String& _str)
 {
 	const size_t catLength = _str.m_length + m_length;
@@ -97,11 +102,13 @@ String& String::Prepend(const String& _str)
 	return *this;
 }
 
+// Return reference to m_str.
 const char* String::CStr() const
 {
 	return m_str;
 }
 
+// Convert entirety of m_str to lower case.
 String& String::ToLower()
 {
 	for (int i = 0; i < m_length; i++) {
@@ -111,6 +118,7 @@ String& String::ToLower()
 	return *this;
 }
 
+// Convert entirety of m_str to upper case.
 String& String::ToUpper()
 {
 	for (int i = 0; i < m_length; i++) {
@@ -120,6 +128,7 @@ String& String::ToUpper()
 	return *this;
 }
 
+// Find a substring in m_str.
 size_t String::Find(const String& _str)
 {
 	size_t result = strstr(m_str, _str.m_str) - m_str;
@@ -127,6 +136,7 @@ size_t String::Find(const String& _str)
 	return (result > m_capacity || result < 0 ? SIZE_MAX : result);
 }
 
+// Find a substring in m_str starting from an index.
 size_t String::Find(size_t _startIndex, const String& _str)
 {
 	for (size_t i = _startIndex; i < m_length - _str.m_length; i++) {
@@ -138,6 +148,7 @@ size_t String::Find(size_t _startIndex, const String& _str)
 	return -1;
 }
 
+// Replace a substring in m_str.
 String& String::Replace(const String& _find, const String& _replace)
 {
 	size_t subStrIndex = Find(_find);
@@ -167,6 +178,7 @@ String& String::Replace(const String& _find, const String& _replace)
 	return *this;
 }
 
+// Read the input from the console and store it in m_str.
 String& String::ReadFromConsole()
 {
 	char buffer[256];
@@ -183,6 +195,7 @@ String& String::ReadFromConsole()
 	return *this;
 }
 
+// Write m_str to console.
 String& String::WriteToConsole()
 {
 	if (m_str == nullptr)
