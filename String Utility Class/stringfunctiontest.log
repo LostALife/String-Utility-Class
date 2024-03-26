@@ -1,0 +1,12 @@
+Tue Mar 26 21:33:15 2024
+Successful: Test Length()
+Successful: Test CharacterAt()
+Successful: Test EqualTo()
+Successful: Test Append()
+Successful: Test Prepend()
+Successful: Test ToLower()
+Successful: Test ToUpper()
+Successful: Test Find()
+Successful: Test Find() From Index
+Successful: Test Replace()
+

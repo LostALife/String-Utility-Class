@@ -1,18 +1,76 @@
 #include <iostream>
 #include <sstream>
+#include <fstream>
 #include "String.h"
 
 void RunFunctionSelection();
+int RunStringFunctionTests();
 void PrintFunctionList();
 
 int main() {
-	// Assessment criteria of outputing 'Hello World!' to the console.
-	String newString("Hello ");
-	newString = newString + "World!\n\n";
-	std::cout << newString.CStr();
+	RunStringFunctionTests();
 
 	// Extra stuffff.
-	RunFunctionSelection();
+	//RunFunctionSelection();
+
+	return 0;
+}
+
+int RunStringFunctionTests() {
+	String workingString("Lorum ipsum!");
+	std::fstream testLog;
+
+	testLog.open("stringfunctiontest.log", std::ios::in | std::ios::out | std::ios::app);
+
+	// If the file is not open, return.
+	if (!testLog.is_open())
+		return -1;
+
+	// Get and print the current time into the log file.
+	time_t now = time(0);
+	char formattedTime[26];
+	ctime_s(formattedTime, sizeof(formattedTime), &now);
+
+	testLog << formattedTime;
+
+	// Test Length()
+	(workingString.Length() == 12) ? testLog << "Successful: Test Length()" << std::endl : testLog << "Failed: Test Length()" << std::endl;
+
+	// Test CharacterAt()
+	(workingString.CharacterAt(7) == 'p') ? testLog << "Successful: Test CharacterAt()" << std::endl : testLog << "Failed: Test CharacterAt()" << std::endl;
+
+	// Test EqualTo()
+	(workingString.EqualTo("Lorum ipsum!")) ? testLog << "Successful: Test EqualTo()" << std::endl : testLog << "Failed: Test EqualTo()" << std::endl;
+
+	// Test Append()
+	(workingString.Append("Appendment") == "Lorum ipsum!Appendment") ? testLog << "Successful: Test Append()" << std::endl : testLog << "Failed: Test Append()" << std::endl;
+	workingString = "Lorum ipsum!";
+
+	// Test Prepend()
+	(workingString.Prepend("Prependment") == "PrependmentLorum ipsum!") ? testLog << "Successful: Test Prepend()" << std::endl : testLog << "Failed: Test Prepend()" << std::endl;
+	workingString = "Lorum ipsum!";
+
+	// Test ToLower()
+	(workingString.ToLower() == "lorum ipsum!") ? testLog << "Successful: Test ToLower()" << std::endl : testLog << "Failed: Test ToLower()" << std::endl;
+	workingString = "Lorum ipsum!";
+
+	// Test ToUpper()
+	(workingString.ToUpper() == "LORUM IPSUM!") ? testLog << "Successful: Test ToUpper()" << std::endl : testLog << "Failed: Test ToUpper()" << std::endl;
+	workingString = "Lorum ipsum!";
+
+	// Test Find()
+	(workingString.Find("rum") == 2) ? testLog << "Successful: Test Find()" << std::endl : testLog << "Failed: Test Find()" << std::endl;
+
+	// Test Find() - From index
+	(workingString.Find(5, "sum") == 8) ? testLog << "Successful: Test Find() From Index" << std::endl : testLog << "Failed: Test Find() From Index" << std::endl;
+
+	// Test Replace()
+	(workingString.Replace("rum", "replacement") == "Loreplacement ipsum!") ? testLog << "Successful: Test Replace()" << std::endl : testLog << "Failed: Test Replace()" << std::endl;
+	workingString = "Lorum ipsum!";
+
+	testLog << std::endl;
+
+	testLog.close();
 
 	return 0;
 }
