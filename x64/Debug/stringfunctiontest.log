@@ -1,0 +1,36 @@
+Wed Mar 27 19:02:14 2024
+Successful: Test Length()
+Successful: Test CharacterAt()
+Successful: Test EqualTo()
+Successful: Test Append()
+Successful: Test Prepend()
+Successful: Test ToLower()
+Successful: Test ToUpper()
+Successful: Test Find()
+Successful: Test Find() (from index)
+Successful: Test Replace()
+
+Wed Mar 27 19:02:45 2024
+Successful: Test Length()
+Successful: Test CharacterAt()
+Successful: Test EqualTo()
+Successful: Test Append()
+Successful: Test Prepend()
+Successful: Test ToLower()
+Successful: Test ToUpper()
+Successful: Test Find()
+Successful: Test Find() (from index)
+Successful: Test Replace()
+
+Wed Mar 27 19:17:01 2024
+Successful: Test Length()
+Successful: Test CharacterAt()
+Successful: Test EqualTo()
+Successful: Test Append()
+Successful: Test Prepend()
+Successful: Test ToLower()
+Successful: Test ToUpper()
+Successful: Test Find()
+Successful: Test Find() (from index)
+Successful: Test Replace()
+

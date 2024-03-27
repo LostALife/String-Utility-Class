@@ -70,6 +70,7 @@ int RunStringFunctionTests() {
 	std::cout << (resultFind ? "Successful: Test Find()" : "Failed: Test Find()") << std::endl;
 	std::cout << (resultFindIndex ? "Successful: Test Find() (from index)" : "Failed: Test Find() (from index)") << std::endl;
 	std::cout << (resultReplace ? "Successful: Test Replace()" : "Failed: Test Replace()") << std::endl;
+	std::cout << std::endl;
 
 
 	// Store results to file.
@@ -78,30 +79,36 @@ int RunStringFunctionTests() {
 	testLog.open("stringfunctiontest.log", std::ios::in | std::ios::out | std::ios::app);
 
 	// If the file is not open, return.
-	if (!testLog.is_open())
-		return -1;
+	if (testLog.is_open()) {
+		// Get and print the current time into the log file.
+		time_t now = time(0);
+		char formattedTime[26];
+		ctime_s(formattedTime, sizeof(formattedTime), &now);
 
-	// Get and print the current time into the log file.
-	time_t now = time(0);
-	char formattedTime[26];
-	ctime_s(formattedTime, sizeof(formattedTime), &now);
+		testLog << formattedTime;
 
-	testLog << formattedTime;
+		testLog << (resultLength ? "Successful: Test Length()" : "Failed: Test Length()") << std::endl;
+		testLog << (resultCharacterAt ? "Successful: Test CharacterAt()" : "Failed: Test CharacterAt()") << std::endl;
+		testLog << (resultEqualTo ? "Successful: Test EqualTo()" : "Failed: Test EqualTo()") << std::endl;
+		testLog << (resultAppend ? "Successful: Test Append()" : "Failed: Test Append()") << std::endl;
+		testLog << (resultPrepend ? "Successful: Test Prepend()" : "Failed: Test Prepend()") << std::endl;
+		testLog << (resultToLower ? "Successful: Test ToLower()" : "Failed: Test ToLower()") << std::endl;
+		testLog << (resultToUpper ? "Successful: Test ToUpper()" : "Failed: Test ToUpper()") << std::endl;
+		testLog << (resultFind ? "Successful: Test Find()" : "Failed: Test Find()") << std::endl;
+		testLog << (resultFindIndex ? "Successful: Test Find() (from index)" : "Failed: Test Find() (from index)") << std::endl;
+		testLog << (resultReplace ? "Successful: Test Replace()" : "Failed: Test Replace()") << std::endl;
 
-	testLog << (resultLength ? "Successful: Test Length()" : "Failed: Test Length()") << std::endl;
-	testLog << (resultCharacterAt ? "Successful: Test CharacterAt()" : "Failed: Test CharacterAt()") << std::endl;
-	testLog << (resultEqualTo ? "Successful: Test EqualTo()" : "Failed: Test EqualTo()") << std::endl;
-	testLog << (resultAppend ? "Successful: Test Append()" : "Failed: Test Append()") << std::endl;
-	testLog << (resultPrepend ? "Successful: Test Prepend()" : "Failed: Test Prepend()") << std::endl;
-	testLog << (resultToLower ? "Successful: Test ToLower()" : "Failed: Test ToLower()") << std::endl;
-	testLog << (resultToUpper ? "Successful: Test ToUpper()" : "Failed: Test ToUpper()") << std::endl;
-	testLog << (resultFind ? "Successful: Test Find()" : "Failed: Test Find()") << std::endl;
-	testLog << (resultFindIndex ? "Successful: Test Find() (from index)" : "Failed: Test Find() (from index)") << std::endl;
-	testLog << (resultReplace ? "Successful: Test Replace()" : "Failed: Test Replace()") << std::endl;
+		testLog << std::endl;
 
-	testLog << std::endl;
+		testLog.close();
 
-	testLog.close();
+		std::cout << "Results saved to stringfunctiontest.log" << std::endl << std::endl;
+	}
+	else {
+		std::cout << "Unable to print test results to log!" << std::endl << std::endl;
+	}
+
+	system("pause");
 
 	return 0;
 }
