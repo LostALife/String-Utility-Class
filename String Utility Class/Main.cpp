@@ -17,7 +17,62 @@ int main() {
 }
 
 int RunStringFunctionTests() {
+	bool resultLength, resultCharacterAt, resultEqualTo, resultAppend, resultPrepend, resultToLower, resultToUpper, resultFind, resultFindIndex, resultReplace;
+
 	String workingString("Lorum ipsum!");
+	
+
+	// Test Length()
+	resultLength = workingString.Length() == 12;
+
+	// Test CharacterAt()
+	resultCharacterAt = workingString.CharacterAt(7) == 'p';
+
+	// Test EqualTo()
+	resultEqualTo = workingString.EqualTo("Lorum ipsum!");
+
+	// Test Append()
+	resultAppend = workingString.Append("Appendment") == "Lorum ipsum!Appendment";
+	workingString = "Lorum ipsum!";
+
+	// Test Prepend()
+	resultPrepend = workingString.Prepend("Prependment") == "PrependmentLorum ipsum!";
+	workingString = "Lorum ipsum!";
+
+	// Test ToLower()
+	resultToLower = workingString.ToLower() == "lorum ipsum!";
+	workingString = "Lorum ipsum!";
+
+	// Test ToUpper()
+	resultToUpper = workingString.ToUpper() == "LORUM IPSUM!";
+	workingString = "Lorum ipsum!";
+
+	// Test Find()
+	resultFind = workingString.Find("rum") == 2;
+
+	// Test Find() - From index
+	resultFindIndex = workingString.Find(5, "sum") == 8;
+
+	// Test Replace()
+	resultReplace = workingString.Replace("rum", "replacement") == "Loreplacement ipsum!";
+	workingString = "Lorum ipsum!";
+
+
+	// Print results to console.
+	std::cout << "Test Results:" << std::endl;
+	std::cout << (resultLength ? "Successful: Test Length()" : "Failed: Test Length()") << std::endl;
+	std::cout << (resultCharacterAt ? "Successful: Test CharacterAt()" : "Failed: Test CharacterAt()") << std::endl;
+	std::cout << (resultEqualTo ? "Successful: Test EqualTo()" : "Failed: Test EqualTo()") << std::endl;
+	std::cout << (resultAppend ? "Successful: Test Append()" : "Failed: Test Append()") << std::endl;
+	std::cout << (resultPrepend ? "Successful: Test Prepend()" : "Failed: Test Prepend()") << std::endl;
+	std::cout << (resultToLower ? "Successful: Test ToLower()" : "Failed: Test ToLower()") << std::endl;
+	std::cout << (resultToUpper ? "Successful: Test ToUpper()" : "Failed: Test ToUpper()") << std::endl;
+	std::cout << (resultFind ? "Successful: Test Find()" : "Failed: Test Find()") << std::endl;
+	std::cout << (resultFindIndex ? "Successful: Test Find() (from index)" : "Failed: Test Find() (from index)") << std::endl;
+	std::cout << (resultReplace ? "Successful: Test Replace()" : "Failed: Test Replace()") << std::endl;
+
+
+	// Store results to file.
 	std::fstream testLog;
 
 	testLog.open("stringfunctiontest.log", std::ios::in | std::ios::out | std::ios::app);
@@ -33,40 +88,16 @@ int RunStringFunctionTests() {
 
 	testLog << formattedTime;
 
-	// Test Length()
-	(workingString.Length() == 12) ? testLog << "Successful: Test Length()" << std::endl : testLog << "Failed: Test Length()" << std::endl;
-
-	// Test CharacterAt()
-	(workingString.CharacterAt(7) == 'p') ? testLog << "Successful: Test CharacterAt()" << std::endl : testLog << "Failed: Test CharacterAt()" << std::endl;
-
-	// Test EqualTo()
-	(workingString.EqualTo("Lorum ipsum!")) ? testLog << "Successful: Test EqualTo()" << std::endl : testLog << "Failed: Test EqualTo()" << std::endl;
-
-	// Test Append()
-	(workingString.Append("Appendment") == "Lorum ipsum!Appendment") ? testLog << "Successful: Test Append()" << std::endl : testLog << "Failed: Test Append()" << std::endl;
-	workingString = "Lorum ipsum!";
-
-	// Test Prepend()
-	(workingString.Prepend("Prependment") == "PrependmentLorum ipsum!") ? testLog << "Successful: Test Prepend()" << std::endl : testLog << "Failed: Test Prepend()" << std::endl;
-	workingString = "Lorum ipsum!";
-
-	// Test ToLower()
-	(workingString.ToLower() == "lorum ipsum!") ? testLog << "Successful: Test ToLower()" << std::endl : testLog << "Failed: Test ToLower()" << std::endl;
-	workingString = "Lorum ipsum!";
-
-	// Test ToUpper()
-	(workingString.ToUpper() == "LORUM IPSUM!") ? testLog << "Successful: Test ToUpper()" << std::endl : testLog << "Failed: Test ToUpper()" << std::endl;
-	workingString = "Lorum ipsum!";
-
-	// Test Find()
-	(workingString.Find("rum") == 2) ? testLog << "Successful: Test Find()" << std::endl : testLog << "Failed: Test Find()" << std::endl;
-
-	// Test Find() - From index
-	(workingString.Find(5, "sum") == 8) ? testLog << "Successful: Test Find() From Index" << std::endl : testLog << "Failed: Test Find() From Index" << std::endl;
-
-	// Test Replace()
-	(workingString.Replace("rum", "replacement") == "Loreplacement ipsum!") ? testLog << "Successful: Test Replace()" << std::endl : testLog << "Failed: Test Replace()" << std::endl;
-	workingString = "Lorum ipsum!";
+	testLog << (resultLength ? "Successful: Test Length()" : "Failed: Test Length()") << std::endl;
+	testLog << (resultCharacterAt ? "Successful: Test CharacterAt()" : "Failed: Test CharacterAt()") << std::endl;
+	testLog << (resultEqualTo ? "Successful: Test EqualTo()" : "Failed: Test EqualTo()") << std::endl;
+	testLog << (resultAppend ? "Successful: Test Append()" : "Failed: Test Append()") << std::endl;
+	testLog << (resultPrepend ? "Successful: Test Prepend()" : "Failed: Test Prepend()") << std::endl;
+	testLog << (resultToLower ? "Successful: Test ToLower()" : "Failed: Test ToLower()") << std::endl;
+	testLog << (resultToUpper ? "Successful: Test ToUpper()" : "Failed: Test ToUpper()") << std::endl;
+	testLog << (resultFind ? "Successful: Test Find()" : "Failed: Test Find()") << std::endl;
+	testLog << (resultFindIndex ? "Successful: Test Find() (from index)" : "Failed: Test Find() (from index)") << std::endl;
+	testLog << (resultReplace ? "Successful: Test Replace()" : "Failed: Test Replace()") << std::endl;
 
 	testLog << std::endl;
 
