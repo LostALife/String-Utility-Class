@@ -148,9 +148,10 @@ size_t String::Find(size_t _startIndex, const String& _str)
 	return -1;
 }
 
-// Replace a substring in m_str.
+// Replaces all instances of a substring in m_str.
 String& String::Replace(const String& _find, const String& _replace)
 {
+	BeginFind:
 	size_t subStrIndex = Find(_find);
 
 	if (subStrIndex == SIZE_MAX) {
@@ -175,7 +176,7 @@ String& String::Replace(const String& _find, const String& _replace)
 
 	strcpy_s(m_str, m_capacity, concatResult);
 
-	return *this;
+	goto BeginFind;
 }
 
 // Read the input from the console and store it in m_str.

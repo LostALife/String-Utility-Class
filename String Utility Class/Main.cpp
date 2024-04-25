@@ -54,7 +54,8 @@ int RunStringFunctionTests() {
 	resultFindIndex = workingString.Find(5, "sum") == 8;
 
 	// Test Replace()
-	resultReplace = workingString.Replace("rum", "replacement") == "Loreplacement ipsum!";
+	workingString = "Lorum ipsum! Lorum ipsum!";
+	resultReplace = workingString.Replace("rum", "replacement") == "Loreplacement ipsum! Loreplacement ipsum!";
 	workingString = "Lorum ipsum!";
 
 

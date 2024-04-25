@@ -1,5 +1,4 @@
-Wed Mar 27 18:51:44 2024
-Test Results:
+Thu Apr 25 15:25:54 2024
 Successful: Test Length()
 Successful: Test CharacterAt()
 Successful: Test EqualTo()
@@ -11,7 +10,7 @@ Successful: Test Find()
 Successful: Test Find() (from index)
 Successful: Test Replace()
 
-Wed Mar 27 18:52:13 2024
+Thu Apr 25 15:25:59 2024
 Successful: Test Length()
 Successful: Test CharacterAt()
 Successful: Test EqualTo()
@@ -23,45 +22,9 @@ Successful: Test Find()
 Successful: Test Find() (from index)
 Successful: Test Replace()
 
-Wed Mar 27 18:52:29 2024
+Thu Apr 25 15:26:04 2024
 Successful: Test Length()
 Successful: Test CharacterAt()
-Successful: Test EqualTo()
-Successful: Test Append()
-Successful: Test Prepend()
-Successful: Test ToLower()
-Successful: Test ToUpper()
-Successful: Test Find()
-Successful: Test Find() (from index)
-Successful: Test Replace()
-
-Wed Mar 27 19:07:10 2024
-Successful: Test Length()
-Successful: Test CharacterAt()
-Successful: Test EqualTo()
-Successful: Test Append()
-Successful: Test Prepend()
-Successful: Test ToLower()
-Successful: Test ToUpper()
-Successful: Test Find()
-Successful: Test Find() (from index)
-Successful: Test Replace()
-
-Thu Apr 25 15:09:09 2024
-Successful: Test Length()
-Successful: Test CharacterAt()
-Successful: Test EqualTo()
-Successful: Test Append()
-Successful: Test Prepend()
-Successful: Test ToLower()
-Successful: Test ToUpper()
-Successful: Test Find()
-Successful: Test Find() (from index)
-Successful: Test Replace()
-
-Thu Apr 25 15:10:51 2024
-Successful: Test Length()
-Failed: Test CharacterAt()
 Successful: Test EqualTo()
 Successful: Test Append()
 Successful: Test Prepend()
