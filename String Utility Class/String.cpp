@@ -38,7 +38,7 @@ size_t String::Length() const
 // Get the character at index.
 char String::CharacterAt(size_t _index)
 {
-	if (_index > 0 && _index < m_length) {
+	if (_index >= 0 && _index < m_length) {
 		return m_str[_index];
 	}
 	else {

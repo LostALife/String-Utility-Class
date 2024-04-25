@@ -47,3 +47,27 @@ Successful: Test Find()
 Successful: Test Find() (from index)
 Successful: Test Replace()
 
+Thu Apr 25 15:09:09 2024
+Successful: Test Length()
+Successful: Test CharacterAt()
+Successful: Test EqualTo()
+Successful: Test Append()
+Successful: Test Prepend()
+Successful: Test ToLower()
+Successful: Test ToUpper()
+Successful: Test Find()
+Successful: Test Find() (from index)
+Successful: Test Replace()
+
+Thu Apr 25 15:10:51 2024
+Successful: Test Length()
+Failed: Test CharacterAt()
+Successful: Test EqualTo()
+Successful: Test Append()
+Successful: Test Prepend()
+Successful: Test ToLower()
+Successful: Test ToUpper()
+Successful: Test Find()
+Successful: Test Find() (from index)
+Successful: Test Replace()
+
